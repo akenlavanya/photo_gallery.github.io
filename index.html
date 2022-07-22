@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallary</title>
+    <link rel="stylesheet" href="photo_gallary.css" type="text/css">
+</head>
+<body>
+    <h2 style="text-align:center" class="heading">Responsive Image Gallery</h2>
+<div>
+  <div class="images_in_row">
+    <!--Adding two Buttons -->
+    <a class="btn1" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="nxt1" onclick="plusSlides(1)">&#10095;</a>
+    <div class="column">
+      <img class="demo cursor" src="image1.jpeg" style="width:100%" onclick="currentSlide(1)"  alt="Beautiful Apples">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="image2.jpeg" style="width:100%" onclick="currentSlide(2)"  alt="Lime Juice">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="image3.jpeg" style="width:100%" onclick="currentSlide(3)"  alt="Grapes">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="image4.jpeg" style="width:100%;height:100px;" onclick="currentSlide(4)" alt="Apple">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="image5.jpeg" style="width:100%;height:100px;" onclick="currentSlide(5)"  alt="Jamuns">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="image6.jpeg" style="width:100%" onclick="currentSlide(6)"  alt="Lime Tree">
+    </div>
+    <div class="column">
+        <img class="demo cursor" src="image7.jpeg" style="width:100%" onclick="currentSlide(7)"  alt="Strawberry">
+      </div>
+    <div class="column">
+        <img class="demo cursor" src="image8.jpeg" style="width:100%" onclick="currentSlide(8)"  alt="Strawberry">
+      </div> 
+      <div class="column">
+      <img class="demo cursor" src="image9.jpeg" style="width:100%" onclick="currentSlide(9)"  alt="Apples">
+    </div>
+    <div class="column">
+        <img class="demo cursor" src="image10.jpeg" style="width:100%;height:100.22px;" onclick="currentSlide(10)"  
+        alt="Different vegetables and some Fruits">
+      </div>
+  </div>
+<div class="container">
+  <div class="mySlides">
+    <img src="image1.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <img src="image2.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <img src="image3.jpeg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <img src="image4.jpeg" style="width:100%;height:568px;">
+  </div>
+
+  <div class="mySlides">
+    <img src="image5.jpeg" style="width:100%;height: 568px;">
+  </div>
+    
+  <div class="mySlides">
+    <img src="image6.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <img src="image7.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <img src="image8.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <img src="image9.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <img src="image10.jpeg" style="width:100%">
+  </div>
+  <a class="btn2" onclick="plusSlides(-1)">❮</a>
+  <a class="nxt2" onclick="plusSlides(1)">❯</a>
+  <div class="caption-container">
+  <p id="caption"></p></div>
+</div>
+</div>
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("demo");
+      let captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background-color: black;
+}
+*{
+    box-sizing: border-box;
+  }
+.heading{
+    font:30px pacifico,Georgia,"Timew new roman";
+    color:white;
+}
+.images_in_row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/*10 columns side by side */
+.column {
+  float: left;
+  width: 10%;
+}
+/* Adding the thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+.active,.demo:hover {
+  opacity: 1;
+}
+img {
+    vertical-align: middle;
+}
+.container{
+    position:absolute;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width:852px;
+    height:370px;
+}
+.mySlides{
+  display: none;
+}
+
+/* Adding a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+.btn1,.nxt1 {
+  cursor: pointer;
+  position: absolute;
+  top: 22%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.nxt1{
+    right:0;
+    border-radius: 3px 0 0 3px;
+}
+.btn1:hover,.nxt1:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/*Buttons in main slide*/
+.btn2,.nxt2 {
+    cursor: pointer;
+    position: absolute;
+    top: 70%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  /* Positioning the next button to right*/
+  .nxt2 {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .btn2:hover,.nxt2:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
